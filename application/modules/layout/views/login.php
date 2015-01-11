@@ -1,0 +1,1 @@
+<?php include_once(LAYOUT_ADMIN_PATH . 'login.php'); ?>
