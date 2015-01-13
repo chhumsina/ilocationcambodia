@@ -45,15 +45,13 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 |
 */
 
-define('BASE_URL', 'http://localhost/ilocationcambodia/');
+define('BASE_URL', 'http://localhost:8888/ilocationcambodia/');
 
 define('DATE_FORMAT', 'd-M-Y');
 define('TITLE', 'CI Sample Template');
 
 define('LAYOUT_SITE_PATH', 'templates/site/');
-define('LAYOUT_ADMIN_PATH', 'templates/ohadmin/');
 define('TEMPLATE_SITE_PATH', BASE_URL . 'templates/site/');
-define('TEMPLATE_ADMIN_PATH', BASE_URL . 'templates/ohadmin/');
 define('IMAGE_PATH', BASE_URL . 'images/');
 
 define('ASSETS_TEMPLATE',	BASE_URL.'templates/assets/');

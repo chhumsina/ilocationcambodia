@@ -11,7 +11,7 @@ class Location extends Site_Controller {
     }
 
     public function index() {
-		$data['profiles'] = $this->mod_location->findAll();
+		$data['branches'] = $this->mod_location->findAll();
         $data['title']  = 'Home page';
         $data['page']   = 'location/view';
         $data['action'] = 'Home page';
