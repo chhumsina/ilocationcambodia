@@ -11,11 +11,19 @@ class Location extends Site_Controller {
     }
 
     public function index() {
-		$data['branches'] = $this->mod_location->findAll();
+		//$data['branches'] = $this->mod_location->findAll();
         $data['title']  = 'Home page';
         $data['page']   = 'location/view';
         $data['action'] = 'Home page';
         $this->load->view('layout/layout', $data);
     }
+
+	public function show($company) {
+		//$data['branches'] = $this->mod_location->findAll();
+		$data['title']  = $company;
+		$data['page']   = 'location/company';
+		$data['action'] = 'Company';
+		$this->load->view('layout/company', $data);
+	}
 
 }

@@ -632,3 +632,7 @@ textarea#message {
     -o-transform: scale(1);
   }
 }
+
+#category {
+	margin-top: 300px;
+}

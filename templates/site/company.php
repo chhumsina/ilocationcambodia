@@ -7,6 +7,8 @@
 
         <!-- styles -->
 	    <link href="<?php echo ASSETS_TEMPLATE; ?>css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="<?php echo ASSETS_TEMPLATE; ?>css/libs.min.css">
+		<link rel="stylesheet" href="<?php echo ASSETS_TEMPLATE; ?>css/app.css">
 	    <link href="<?php echo ASSETS_TEMPLATE; ?>css/main.css" rel="stylesheet">
 
 	    <!-- styles -->
@@ -14,10 +16,13 @@
         <!-- JS -->
         <script src="<?php echo ASSETS_TEMPLATE; ?>js/jquery.js"></script>
         <script src="<?php echo ASSETS_TEMPLATE; ?>js/bootstrap.min.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.13"></script>
+		<script src="<?php echo ASSETS_TEMPLATE; ?>js/libs.min.js?v=0.1.32"></script>
+		<script src="<?php echo ASSETS_TEMPLATE; ?>js/maplace-0.1.3.min.js?v=0.1.32"></script>
         <!-- end js -->
     </head>
 
-    
+
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
     <header id="header" role="banner">
         <div class="container">
@@ -41,11 +46,6 @@
             </div>
         </div>
     </header><!--/#header-->
-
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div id="homemap"  style="position:fixed;overflow:hidden;width:100%;"><div id="gmap_canvas" style="width:100%;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(11.54487,104.89217),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(11.54487,104.89217)});infowindow = new google.maps.InfoWindow({content:"<b>ILocationCambodia</b>" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-<br/>
-<br/>
-<br/>
 	<section id="category">
         <div class="container">
             <div class="box first">
@@ -146,26 +146,8 @@
             </div>
         </div>
     </footer><!--/#footer-->
-	<script>
-		$(function(){
-			var windowH = $(window).height();
-			var wrapperH = $('#homemap, #gmap_canvas').height();
-			if(windowH > wrapperH) {
-				$('#homemap, #gmap_canvas').css({'height':($(window).height())+'px'});
-			}
-			$(window).resize(function(){
-				var windowH = $(window).height();
-				var wrapperH = $('#homemap, #gmap_canvas').height();
-				var differenceH = windowH - wrapperH;
-				var newH = wrapperH + differenceH;
-				var truecontentH = $('#truecontent').height();
-				if(windowH > truecontentH) {
-					newH = newH - 0;
-					$('#homemap, #gmap_canvas').css('height', (newH)+'px');
-				}
-			})
-		});
-	</script>
+	<script src="<?php echo ASSETS_TEMPLATE; ?>js/app.js?v=0.1.32"></script>
+
     </body>
 
 </html>

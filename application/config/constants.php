@@ -45,7 +45,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 |
 */
 
-define('BASE_URL', 'http://localhost:8888/ilocationcambodia/');
+define('BASE_URL', 'http://localhost/ilocationcambodia/');
 
 define('DATE_FORMAT', 'd-M-Y');
 define('TITLE', 'CI Sample Template');
