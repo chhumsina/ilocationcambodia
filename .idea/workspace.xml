@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d58b1c80-21b6-450c-88ae-48d247074797" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/ohadmin/views/dashboard.php" afterPath="$PROJECT_DIR$/application/modules/ohadmin/views/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/backend/index.php" afterPath="$PROJECT_DIR$/templates/backend/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/authentication/models/mod_authentication.php" afterPath="$PROJECT_DIR$/application/modules/authentication/models/mod_authentication.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/ohadmin/models/mod_ohadmin.php" afterPath="$PROJECT_DIR$/application/modules/ohadmin/models/mod_ohadmin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/ohadmin/controllers/ohadmin.php" afterPath="$PROJECT_DIR$/application/modules/ohadmin/controllers/ohadmin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
-    </list>
+    <list default="true" id="d58b1c80-21b6-450c-88ae-48d247074797" name="Default" comment="" />
     <ignored path="ilocationcambodia.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
