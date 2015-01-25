@@ -167,12 +167,10 @@ a:focus {
   border-radius: 0 0 5px 5px;
 }
 .box h2 {
-  padding: 10px 30px;
-  display: inline-block;
-  border-radius: 4px;
-  position: relative;
-  margin-bottom: 30px;
-  font-size: 48px;
+	border-radius: 4px;
+	margin-bottom: 15px;
+	margin-top: -20px;
+	padding: 0 30px 10px 0;
 }
 #portfolio .box {
   background: #f3f3f3;
@@ -635,4 +633,25 @@ textarea#message {
 
 #category {
 	margin-top: 300px;
+}
+
+.badge{
+	font-size: 14px;
+	border-radius: 2px;
+}
+
+.company #category{
+	margin-top: 145px;
+}
+
+.company .box.first {
+	z-index: 9999999;
+}
+
+.map_content  {
+	width: 100%;
+}
+
+.gmap {
+	height: 600px;
 }

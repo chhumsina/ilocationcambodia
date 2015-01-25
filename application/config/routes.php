@@ -39,6 +39,7 @@
 */
 
 $route['default_controller'] = "location";
+$route['ohadmin'] = "authentication/login";
 $route['(:any)'] = "location/show/$1";
 $route['404_override'] = '';
 

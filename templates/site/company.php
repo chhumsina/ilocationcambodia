@@ -23,7 +23,7 @@
     </head>
 
 
-<body data-spy="scroll" data-target="#navbar" data-offset="0">
+<body data-spy="scroll" data-target="#navbar" data-offset="0" class="company">
     <header id="header" role="banner">
         <div class="container">
             <div id="navbar" class="navbar navbar-default">
@@ -49,11 +49,9 @@
 	<section id="category">
         <div class="container">
             <div class="box first">
-                <div class="row">
-                    <div class="col-md-12">
-						<?php empty($page) ? '' : $this->load->view($page); ?>
-                    </div><!--/.col-md-12-->
-                </div><!--/.row-->
+				<div class="col-md-12">
+					<?php empty($page) ? '' : $this->load->view($page); ?>
+				</div><!--/.col-md-12-->
             </div><!--/.box-->
         </div><!--/.container-->
     </section><!--/#services-->

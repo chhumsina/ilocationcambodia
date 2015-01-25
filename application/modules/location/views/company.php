@@ -1,6 +1,4 @@
-sssssssssssssssssssss
-
-		<section id="menu" class="row">
+		<section id="menu" class="row map_content">
 			<h2 class="two columns mobile-one">Menu</h2>
 			<div class="four columns menu mobile-two">
 				<ul class="tabs-content">
@@ -22,30 +20,15 @@ sssssssssssssssssssss
 
 		<script language="JavaScript">
 			var LocsA = [
-<!--				-->
-//					php ($branches->result_array() as $branch){
-//						echo "{";
-//						echo "title:'".$branch['title']."',";
-//						echo "lat:'".$branch['latitude']."',";
-//						echo "lon:'".$branch['longitude']."',";
-//						echo "html:'".$branch['description']."',";
-//						echo "icon:'".$branch['phone_1']."',";
-//						echo "},";
-//					}
-//				?>
-				{
-			 title:'testtest',
-			 lat:'123',
-			 lon:'312',
-			 html:'html test',
-			 icon:'html test'
-			},
-				{
-					title:'testtest',
-					lat:'222',
-					lon:'312',
-					html:'html test',
-					icon:'html test'
-				}
-			];
+				<?php foreach ($companies->result_array() as $company) {
+						echo "{";
+						echo "title:'".$company['title']."',";
+						echo "lat:".$company['latitude'].",";
+						echo "lon:".$company['longitude'].",";
+						echo "html:'<b>".$company['title']."</b><br/><br/><p>Email: ".$company['email']."</p><p>Website: ".$company['website']."</p><p>Phone 1: ".$company['phone_1']."</p><p>Phone 2: ".$company['phone_2']."</p><p>Address: ".$company['address']."</p><p>Description:  ".$company['description']."</p>',";
+						echo "icon:'http://www.deposits.org/logos/dp5311c3beb13a3.JPG'";
+						echo "},";
+					}
+				echo ']';
+				?>
 		</script>
