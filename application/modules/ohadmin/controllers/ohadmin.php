@@ -15,17 +15,65 @@ class Ohadmin extends Admin_Controller {
     }
 
     public function index() {
-
         if (!$this->checkSession()) {
             redirect('authentication/login');
             exit();
         }
         $data['pages']  = $this->mod_ohadmin->findAll();
-        $data['title']  = "Ohhuge Backend";
+        $data['title']  = "ILocationCambodia Backend";
         $data['page']   = 'ohadmin/dashboard';
         $data['action'] = 'Dashboard';
         $this->load->view('masterpage/master', $data);
     }
+
+	public function category() {
+		if (!$this->checkSession()) {
+			redirect('authentication/login');
+			exit();
+		}
+		$data['pages']  = $this->mod_ohadmin->findAll();
+		$data['title']  = "ILocationCambodia Backend";
+		$data['page']   = 'ohadmin/category';
+		$data['action'] = 'Category';
+		$this->load->view('masterpage/master', $data);
+	}
+
+	public function company() {
+		if (!$this->checkSession()) {
+			redirect('authentication/login');
+			exit();
+		}
+		$data['pages']  = $this->mod_ohadmin->findAll();
+		$data['title']  = "ILocationCambodia Backend";
+		$data['page']   = 'ohadmin/company';
+		$data['action'] = 'Company';
+		$this->load->view('masterpage/master', $data);
+	}
+
+	// Branch page
+	public function branch() {
+		if (!$this->checkSession()) {
+			redirect('authentication/login');
+			exit();
+		}
+		$data['branches']  = $this->mod_ohadmin->getAllBraches();
+		$data['title']  = "ILocationCambodia Backend";
+		$data['page']   = 'ohadmin/branch';
+		$data['action'] = 'Branch';
+		$this->load->view('masterpage/master', $data);
+	}
+
+	public function contact() {
+		if (!$this->checkSession()) {
+			redirect('authentication/login');
+			exit();
+		}
+		$data['pages']  = $this->mod_ohadmin->findAll();
+		$data['title']  = "ILocationCambodia Backend";
+		$data['page']   = 'ohadmin/contact';
+		$data['action'] = 'Contact';
+		$this->load->view('masterpage/master', $data);
+	}
 
     public function approve($id) {
         $this->mod_ohadmin->approve($id);
@@ -53,5 +101,6 @@ class Ohadmin extends Admin_Controller {
 
         redirect('ohadmin');
     }
+
 
 }

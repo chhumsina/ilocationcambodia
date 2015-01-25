@@ -2,9 +2,9 @@
 
 class Mod_Ohadmin extends CI_Model {
 
-    public function findAll() {
+    public function getAllBraches() {
         $this->db->select('*');
-        $this->db->from(table('tbl_page'));
+        $this->db->from(table('ilc_branches'));
         return $this->db->get();
     }
 

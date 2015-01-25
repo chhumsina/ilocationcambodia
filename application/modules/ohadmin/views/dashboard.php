@@ -1,28 +1,88 @@
-<table id="tablelist" class="table table-striped table-bordered" cellspacing="0" width="100%">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Code</th>
-            <th>Active</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        foreach ($pages->result_array() as $page) {
-           echo '<tr>';
-           echo '<td>'.$page['pag_name'].'</td>';
-           echo '<td>'.$page['pag_email'].'</td>';
-           echo '<td>'.$page['pag_code'].'</td>';
-           echo '<td align="center">';
-            if($page['pag_status'] == 1) {
-                echo '<a href="'.BASE_URL.'ohadmin/pending/'.$page['pag_id'].'"><span class="btn btn-success">+</span></span></a> <a href="'.BASE_URL.'ohadmin/delete/'.$page['pag_id'].'" class="confirm-delete"><span class="btn btn-danger">x</span></a>';
-            }else {
-                echo '<a href="'.BASE_URL.'ohadmin/approve/'.$page['pag_id'].'"><span class="btn btn-warning">-</span></a> <a href="'.BASE_URL.'ohadmin/delete/'.$page['pag_id'].'" class="confirm-delete"><span class="btn btn-danger">x</span></a>';
-            }
-            echo'</td>';
-           echo '</tr>';
-        }
-        ?>
-    </tbody>
-</table>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-primary">
+			<a href="<?php echo BASE_URL;?>ohadmin/category">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-comments fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">26</div>
+						<div>New Comments!</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<span class="pull-left">View Details</span>
+				<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+				<div class="clearfix"></div>
+			</div>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-green">
+			<a href="<?php echo BASE_URL;?>ohadmin/company">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-tasks fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">12</div>
+						<div>New Tasks!</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<span class="pull-left">View Details</span>
+				<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+				<div class="clearfix"></div>
+			</div>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-yellow">
+			<a href="<?php echo BASE_URL;?>ohadmin/branch">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-shopping-cart fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">124</div>
+						<div>New Orders!</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<span class="pull-left">View Details</span>
+				<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+				<div class="clearfix"></div>
+			</div>
+			</a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-red">
+			<a href="<?php echo BASE_URL;?>ohadmin/contact">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-support fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">13</div>
+						<div>Support Tickets!</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<span class="pull-left">View Details</span>
+				<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+				<div class="clearfix"></div>
+			</div>
+			</a>
+		</div>
+	</div>

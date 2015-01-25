@@ -15,7 +15,7 @@ class Mod_authentication extends CI_Model {
         $this->db->select('*');
         $this->db->where(field('use_name'), $username);
         $this->db->where(field('use_password'), $password);
-        $this->db->from(table('tbl_user'));
+        $this->db->from(table('ilc_companies'));
         $data=$this->db->get();
         if($data->num_rows()>0){
             $userData=$data->row_array();
