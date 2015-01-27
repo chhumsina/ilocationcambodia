@@ -19,7 +19,6 @@ class Ohadmin extends Admin_Controller {
             redirect('authentication/login');
             exit();
         }
-        $data['pages']  = $this->mod_ohadmin->findAll();
         $data['title']  = "ILocationCambodia Backend";
         $data['page']   = 'ohadmin/dashboard';
         $data['action'] = 'Dashboard';
@@ -31,7 +30,7 @@ class Ohadmin extends Admin_Controller {
 			redirect('authentication/login');
 			exit();
 		}
-		$data['pages']  = $this->mod_ohadmin->findAll();
+		//$data['pages']  = $this->mod_ohadmin->findAll();
 		$data['title']  = "ILocationCambodia Backend";
 		$data['page']   = 'ohadmin/category';
 		$data['action'] = 'Category';
@@ -43,32 +42,20 @@ class Ohadmin extends Admin_Controller {
 			redirect('authentication/login');
 			exit();
 		}
-		$data['pages']  = $this->mod_ohadmin->findAll();
+		//$data['pages']  = $this->mod_ohadmin->findAll();
 		$data['title']  = "ILocationCambodia Backend";
 		$data['page']   = 'ohadmin/company';
 		$data['action'] = 'Company';
 		$this->load->view('masterpage/master', $data);
 	}
 
-	// Branch page
-	public function branch() {
-		if (!$this->checkSession()) {
-			redirect('authentication/login');
-			exit();
-		}
-		$data['branches']  = $this->mod_ohadmin->getAllBraches();
-		$data['title']  = "ILocationCambodia Backend";
-		$data['page']   = 'ohadmin/branch';
-		$data['action'] = 'Branch';
-		$this->load->view('masterpage/master', $data);
-	}
 
 	public function contact() {
 		if (!$this->checkSession()) {
 			redirect('authentication/login');
 			exit();
 		}
-		$data['pages']  = $this->mod_ohadmin->findAll();
+		//$data['pages']  = $this->mod_ohadmin->findAll();
 		$data['title']  = "ILocationCambodia Backend";
 		$data['page']   = 'ohadmin/contact';
 		$data['action'] = 'Contact';

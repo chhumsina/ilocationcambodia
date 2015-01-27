@@ -30,6 +30,7 @@ if (!function_exists('field')) {
 
 
         $field['com_id']  = 'com_id';
+		$field['branch_id']  = 'branch_id';
 		$field['title']  = 'title';
 		$field['longitude']  = 'longitude';
 		$field['latitude']  = 'latitude';
@@ -41,7 +42,6 @@ if (!function_exists('field')) {
 		$field['description']  = 'description';
 		$field['user_id']  = 'user_id';
 
-		$field['branch_id']  = 'branch_id';
 		$field['first_name']  = 'first_name';
 		$field['last_name']  = 'last_name';
         $field['user_name']  = 'user_name';

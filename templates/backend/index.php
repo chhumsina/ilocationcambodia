@@ -14,6 +14,9 @@
 	<!-- Bootstrap Core CSS -->
 	<link href="<?php echo ASSETS_TEMPLATE; ?>sb-admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
+	<!-- lat lon picker google map -->
+	<link rel="stylesheet" type="text/css" href="<?php echo ASSETS_TEMPLATE; ?>latlonPicker/css/jquery-gmaps-latlon-picker.css"/>
+
 	<!-- MetisMenu CSS -->
 	<link href="<?php echo ASSETS_TEMPLATE; ?>sb-admin/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
@@ -24,7 +27,7 @@
 	<link href="<?php echo ASSETS_TEMPLATE; ?>sb-admin/bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
 
 	<!-- Custom CSS -->
-	<link href="<?php echo ASSETS_TEMPLATE; ?>sb-admin/dist/css/sb-admin-2.css" rel="stylesheet">
+	<link href="<?php echo ASSETS_TEMPLATE; ?>sb-admin/css/sb-admin-2.css" rel="stylesheet">
 
 	<!-- Custom Fonts -->
 	<link href="<?php echo ASSETS_TEMPLATE; ?>sb-admin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -304,7 +307,7 @@
 <div id="page-wrapper">
 <div class="row">
 	<div class="col-lg-12">
-		<h1 class="page-header">Dashboard</h1>
+		<h1 class="page-header"><?php echo $action;?></h1>
 	</div>
 	<!-- /.col-lg-12 -->
 </div>
@@ -322,6 +325,10 @@
 
 <!-- jQuery -->
 <script src="<?php echo ASSETS_TEMPLATE; ?>sb-admin/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!-- lat lon picker google map -->
+<script src="<?php echo ASSETS_TEMPLATE; ?>latlonPicker/js/jquery-gmaps-latlon-picker.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="<?php echo ASSETS_TEMPLATE; ?>sb-admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -334,7 +341,7 @@
 <script src="<?php echo ASSETS_TEMPLATE; ?>sb-admin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="<?php echo ASSETS_TEMPLATE; ?>sb-admin/dist/js/sb-admin-2.js"></script>
+<script src="<?php echo ASSETS_TEMPLATE; ?>sb-admin/js/sb-admin-2.js"></script>
 
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
 <script>

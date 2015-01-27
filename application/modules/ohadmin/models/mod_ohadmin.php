@@ -2,13 +2,7 @@
 
 class Mod_Ohadmin extends CI_Model {
 
-    public function getAllBraches() {
-        $this->db->select('*');
-        $this->db->from(table('ilc_branches'));
-        return $this->db->get();
-    }
-
-    public function approve($id) {
+     public function approve($id) {
         $data = array(
             field('pag_status') => 1
         );
