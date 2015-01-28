@@ -9,6 +9,7 @@ if (!function_exists('table')) {
 
     function table($key) {
         // Tables' name
+		$table['ilc_categories'] = 'ilc_categories';
 		$table['ilc_branches'] = 'ilc_branches';
 		$table['ilc_companies'] = 'ilc_companies';
 
@@ -56,6 +57,10 @@ if (!function_exists('field')) {
         $field['company_name']  = 'company_name';
         $field['cat_id']  = 'cat_id';
         $field['deleted']  = 'deleted';
+
+        $field['cat_id']  = 'cat_id';
+        $field['cat_name']  = 'cat_name';
+        $field['approve']  = 'approve';
 
         if (array_key_exists($key, $field)) {
             return $field[$key];

@@ -349,6 +349,18 @@
 		$('#dataTables-example').DataTable({
 			responsive: true
 		});
+
+		$(".confirm-delete").click(function () {
+			if (!confirm("Do you want to delete?")) {
+				return false;
+			}
+		});
+
+		$(".clickableRow").click(function() {
+			console.log(window.document.location = $(this).attr("href"));
+
+		});
+
 	});
 </script>
 
