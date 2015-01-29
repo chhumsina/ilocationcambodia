@@ -28,6 +28,7 @@ if (!function_exists('field')) {
 
         $field['use_name'] 	= 'use_name';
         $field['use_password'] 	= 'use_password';
+        $field['re_password'] 	= 're_password';
 
 
         $field['com_id']  = 'com_id';
@@ -43,18 +44,14 @@ if (!function_exists('field')) {
 		$field['description']  = 'description';
 		$field['user_id']  = 'user_id';
 
-		$field['first_name']  = 'first_name';
-		$field['last_name']  = 'last_name';
-        $field['user_name']  = 'user_name';
-        $field['password']  = 'password';
+
         $field['gender']  = 'gender';
         $field['email']  = 'email';
         $field['phone_1']  = 'phone_1';
         $field['phone_2']  = 'phone_2';
-        $field['image_profile']  = 'image_profile';
         $field['utype_id']  = 'utype_id';
-        $field['logo_company']  = 'logo_company';
-        $field['company_name']  = 'company_name';
+        $field['com_logo']  = 'com_logo';
+        $field['com_name']  = 'com_name';
         $field['cat_id']  = 'cat_id';
         $field['deleted']  = 'deleted';
 

@@ -3,7 +3,7 @@
 /**
  * Description of group
  * It is a controller of group. It will controll all action of group management
- * @author Richat
+ * @author Sina
  */
 class Branch extends Admin_Controller {
 

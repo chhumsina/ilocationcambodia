@@ -3,7 +3,7 @@
 /**
  * Description of group
  * It is a controller of group. It will controll all action of group management
- * @author Richat
+ * @author Sina
  */
 class Category extends Admin_Controller {
 
