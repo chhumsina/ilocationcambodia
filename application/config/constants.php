@@ -56,5 +56,8 @@ define('IMAGE_PATH', BASE_URL . 'images/');
 
 define('ASSETS_TEMPLATE',	BASE_URL.'templates/assets/');
 
+// message
+define('MSG_SUCCUSS', '<div class="alert-success"><p>Update success!</p></div>');
+
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

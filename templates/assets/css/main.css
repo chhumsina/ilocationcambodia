@@ -458,7 +458,7 @@ a:focus {
 }
 .navbar-default {
   background: #fff;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0;
   border: 0;
   padding: 0;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
@@ -654,4 +654,18 @@ textarea#message {
 
 .gmap {
 	height: 600px;
+}
+
+.modal {
+	z-index: 99999999;
+}
+
+.box.first {
+	border-bottom: 1px dashed #ccc;
+	border-radius: 0;
+	margin-top: 0;
+}
+
+* {
+	border-radius: 0 !important;
 }

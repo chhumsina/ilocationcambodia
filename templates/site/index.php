@@ -7,6 +7,7 @@
 
         <!-- styles -->
 	    <link href="<?php echo ASSETS_TEMPLATE; ?>css/bootstrap.min.css" rel="stylesheet">
+	    <link href="<?php echo ASSETS_TEMPLATE; ?>css/font-awesome.min.css" rel="stylesheet">
 	    <link href="<?php echo ASSETS_TEMPLATE; ?>css/main.css" rel="stylesheet">
 
 	    <!-- styles -->
@@ -14,31 +15,16 @@
         <!-- JS -->
         <script src="<?php echo ASSETS_TEMPLATE; ?>js/jquery.js"></script>
         <script src="<?php echo ASSETS_TEMPLATE; ?>js/bootstrap.min.js"></script>
+        <script src="<?php echo ASSETS_TEMPLATE; ?>js/main.js"></script>
         <!-- end js -->
     </head>
 
     
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
+	<section id="home"></section>
     <header id="header" role="banner">
         <div class="container">
-            <div id="navbar" class="navbar navbar-default">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"></a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#home"><i class="icon-home"></i></a></li>
-                        <li><a href="#category">Category</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+			<?php include 'menu.php';?>
         </div>
     </header><!--/#header-->
 
@@ -46,94 +32,7 @@
 <br/>
 <br/>
 <br/>
-	<section id="category">
-        <div class="container">
-            <div class="box first">
-                <div class="row">
-                    <div class="col-md-12">
-						<?php empty($page) ? '' : $this->load->view($page); ?>
-                    </div><!--/.col-md-12-->
-                </div><!--/.row-->
-            </div><!--/.box-->
-        </div><!--/.container-->
-    </section><!--/#services-->
-
-       <section id="contact">
-        <div class="container">
-            <div class="box last">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h1>Contact Form</h1>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                        <div class="status alert alert-success" style="display: none"></div>
-                        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Email address">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-danger btn-lg">Send Message</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div><!--/.col-sm-6-->
-                    <div class="col-sm-6">
-                        <h1>Our Address</h1>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <address>
-                                    <strong>Twitter, Inc.</strong><br>
-                                    795 Folsom Ave, Suite 600<br>
-                                    San Francisco, CA 94107<br>
-                                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                                </address>
-                            </div>
-                            <div class="col-md-6">
-                                <address>
-                                    <strong>Twitter, Inc.</strong><br>
-                                    795 Folsom Ave, Suite 600<br>
-                                    San Francisco, CA 94107<br>
-                                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                                </address>
-                            </div>
-                        </div>
-                        <h1>Connect with us</h1>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="social">
-                                    <li><a href="#"><i class="icon-facebook icon-social"></i> Facebook</a></li>
-                                    <li><a href="#"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
-                                    <li><a href="#"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="social">
-                                    <li><a href="#"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
-                                    <li><a href="#"><i class="icon-twitter icon-social"></i> Twitter</a></li>
-                                    <li><a href="#"><i class="icon-youtube icon-social"></i> Youtube</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div><!--/.col-sm-6-->
-                </div><!--/.row-->
-            </div><!--/.box-->
-        </div><!--/.container-->
-    </section><!--/#contact-->
-
+	<?php empty($page) ? '' : $this->load->view($page); ?>
     <footer id="footer">
         <div class="container">
             <div class="row">
@@ -166,6 +65,9 @@
 			})
 		});
 	</script>
+
+	<?php include 'login.php';?>
+
     </body>
 
 </html>

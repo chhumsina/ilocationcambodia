@@ -363,3 +363,51 @@ table.dataTable thead .sorting:after {
 	display: inline !important;
 	width: 24% !important;
 }
+
+.companyForm .form-control,
+.companyForm textarea {
+	padding-top: 8px;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: -moz-use-text-color -moz-use-text-color #ccc;
+	border-image: none;
+	border-radius: 0;
+	border-style: none none dashed;
+	border-width: 0 0 1px;
+	box-shadow: 0 0;
+}
+
+.alert-success {
+	font-weight: bold;
+	margin-bottom: 20px;
+	padding: 11px 0 1px 8px;
+}
+
+.image-preview-input {
+	position: relative;
+	overflow: hidden;
+	margin: 0px;
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+}
+.image-preview-input input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+	margin-left:2px;
+}
+
+* {
+	border-radius: 0 !important;
+}

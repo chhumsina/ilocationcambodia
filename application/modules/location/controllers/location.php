@@ -11,7 +11,8 @@ class Location extends Site_Controller {
     }
 
     public function index() {
-		$data['companies'] = $this->mod_company->findAll();
+		$data['categories'] = $this->mod_company->findAllCategories();
+		$data['companies'] = $this->mod_company->findAllCompanies();
         $data['title']  = 'Home page';
         $data['page']   = 'location/view';
         $data['action'] = 'Home page';

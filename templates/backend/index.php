@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>SB Admin 2 - Bootstrap Admin Theme</title>
+	<title><?php echo $action;?> - Member</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="<?php echo ASSETS_TEMPLATE; ?>sb-admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -54,217 +54,12 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	</button>
-	<a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+	<a class="navbar-brand" href="<?php echo BASE_URL;?>" target="_blank">ILocationCambodia</a>
 </div>
 <!-- /.navbar-header -->
 
 <ul class="nav navbar-top-links navbar-right">
-<li class="dropdown">
-	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		<i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-	</a>
-	<ul class="dropdown-menu dropdown-messages">
-		<li>
-			<a href="#">
-				<div>
-					<strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-				</div>
-				<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a href="#">
-				<div>
-					<strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-				</div>
-				<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a href="#">
-				<div>
-					<strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-				</div>
-				<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a class="text-center" href="#">
-				<strong>Read All Messages</strong>
-				<i class="fa fa-angle-right"></i>
-			</a>
-		</li>
-	</ul>
-	<!-- /.dropdown-messages -->
-</li>
-<!-- /.dropdown -->
-<li class="dropdown">
-	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		<i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
-	</a>
-	<ul class="dropdown-menu dropdown-tasks">
-		<li>
-			<a href="#">
-				<div>
-					<p>
-						<strong>Task 1</strong>
-						<span class="pull-right text-muted">40% Complete</span>
-					</p>
-					<div class="progress progress-striped active">
-						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-							<span class="sr-only">40% Complete (success)</span>
-						</div>
-					</div>
-				</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a href="#">
-				<div>
-					<p>
-						<strong>Task 2</strong>
-						<span class="pull-right text-muted">20% Complete</span>
-					</p>
-					<div class="progress progress-striped active">
-						<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
-						</div>
-					</div>
-				</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a href="#">
-				<div>
-					<p>
-						<strong>Task 3</strong>
-						<span class="pull-right text-muted">60% Complete</span>
-					</p>
-					<div class="progress progress-striped active">
-						<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-							<span class="sr-only">60% Complete (warning)</span>
-						</div>
-					</div>
-				</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a href="#">
-				<div>
-					<p>
-						<strong>Task 4</strong>
-						<span class="pull-right text-muted">80% Complete</span>
-					</p>
-					<div class="progress progress-striped active">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-							<span class="sr-only">80% Complete (danger)</span>
-						</div>
-					</div>
-				</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a class="text-center" href="#">
-				<strong>See All Tasks</strong>
-				<i class="fa fa-angle-right"></i>
-			</a>
-		</li>
-	</ul>
-	<!-- /.dropdown-tasks -->
-</li>
-<!-- /.dropdown -->
-<li class="dropdown">
-	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		<i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
-	</a>
-	<ul class="dropdown-menu dropdown-alerts">
-		<li>
-			<a href="#">
-				<div>
-					<i class="fa fa-comment fa-fw"></i> New Comment
-					<span class="pull-right text-muted small">4 minutes ago</span>
-				</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a href="#">
-				<div>
-					<i class="fa fa-twitter fa-fw"></i> 3 New Followers
-					<span class="pull-right text-muted small">12 minutes ago</span>
-				</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a href="#">
-				<div>
-					<i class="fa fa-envelope fa-fw"></i> Message Sent
-					<span class="pull-right text-muted small">4 minutes ago</span>
-				</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a href="#">
-				<div>
-					<i class="fa fa-tasks fa-fw"></i> New Task
-					<span class="pull-right text-muted small">4 minutes ago</span>
-				</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a href="#">
-				<div>
-					<i class="fa fa-upload fa-fw"></i> Server Rebooted
-					<span class="pull-right text-muted small">4 minutes ago</span>
-				</div>
-			</a>
-		</li>
-		<li class="divider"></li>
-		<li>
-			<a class="text-center" href="#">
-				<strong>See All Alerts</strong>
-				<i class="fa fa-angle-right"></i>
-			</a>
-		</li>
-	</ul>
-	<!-- /.dropdown-alerts -->
-</li>
-<!-- /.dropdown -->
-<li class="dropdown">
-	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		<i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-	</a>
-	<ul class="dropdown-menu dropdown-user">
-		<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-		</li>
-		<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-		</li>
-		<li class="divider"></li>
-		<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-		</li>
-	</ul>
-	<!-- /.dropdown-user -->
-</li>
-<!-- /.dropdown -->
+	<li><a href="<?php echo BASE_URL;?>member/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
 </ul>
 <!-- /.navbar-top-links -->
 
@@ -282,21 +77,37 @@
 				</div>
 				<!-- /input-group -->
 			</li>
+			<?php if ($this->session->userdata('ohadmin')) {?>
 			<li>
 				<a href="<?php echo BASE_URL;?>ohadmin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
 			</li>
 			<li>
-				<a href="<?php echo BASE_URL;?>ohadmin/category"><i class="fa fa-dashboard fa-fw"></i> Category</a>
+				<a href="<?php echo BASE_URL;?>ohadmin/category"><i class="fa fa-qrcode fa-fw"></i> Category</a>
 			</li>
 			<li>
-				<a href="<?php echo BASE_URL;?>ohadmin/company"><i class="fa fa-dashboard fa-fw"></i> Company</a>
+				<a href="<?php echo BASE_URL;?>ohadmin/company"><i class="fa fa-credit-card fa-fw"></i> Company</a>
 			</li>
 			<li>
-				<a href="<?php echo BASE_URL;?>ohadmin/branch"><i class="fa fa-dashboard fa-fw"></i> Branch</a>
+				<a href="<?php echo BASE_URL;?>ohadmin/branch"><i class="fa fa-map-marker fa-fw"></i> Branch</a>
 			</li>
 			<li>
-				<a href="<?php echo BASE_URL;?>ohadmin/contact"><i class="fa fa-dashboard fa-fw"></i> Contact</a>
+				<a href="<?php echo BASE_URL;?>ohadmin/contact"><i class="fa fa-phone fa-fw"></i> Contact</a>
 			</li>
+			<?php } ?>
+			<?php if ($this->session->userdata('useName')) {?>
+				<li>
+					<a href="<?php echo BASE_URL;?>member/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+				</li>
+				<li>
+					<a href="<?php echo BASE_URL;?>member/company"><i class="fa fa-credit-card fa-fw"></i> Company</a>
+				</li>
+				<li>
+					<a href="<?php echo BASE_URL;?>member/branch"><i class="fa fa-map-marker fa-fw"></i> Branch</a>
+				</li>
+				<li>
+					<a href="<?php echo BASE_URL;?>member/contact"><i class="fa fa-phone fa-fw"></i> Contact</a>
+				</li>
+			<?php } ?>
 		</ul>
 	</div>
 	<!-- /.sidebar-collapse -->
@@ -308,6 +119,9 @@
 <div class="row">
 	<div class="col-lg-12">
 		<h1 class="page-header"><?php echo $action;?></h1>
+		<?php echo $this->session->userdata('ms_succss')?$this->session->userdata('ms_succss'):'';?>
+		<?php echo validation_errors();?>
+		<?php $this->session->unset_userdata('ms_succss');?>
 	</div>
 	<!-- /.col-lg-12 -->
 </div>
@@ -361,6 +175,67 @@
 
 		});
 
+		$(".alert-success").fadeOut(2000);
+
+		// upload image
+		$(document).on('click, mouseleave', '#close-preview, .popover', function(){
+			$('.image-preview').popover('hide');
+			// Hover befor close the preview
+			$('.image-preview').hover(
+					function () {
+						$('.image-preview').popover('show');
+					},
+					function () {
+						$('.image-preview').popover('hide');
+					}
+			);
+		});
+
+		$(function() {
+			// Create the close button
+			var closebtn = $('<button/>', {
+				type:"button",
+				text: 'x',
+				id: 'close-preview',
+				style: 'font-size: initial;',
+			});
+			closebtn.attr("class","close pull-right");
+			// Set the popover default content
+			$('.image-preview').popover({
+				trigger:'manual',
+				html:true,
+				title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+				content: "There's no image",
+				placement:'bottom'
+			});
+			// Clear event
+			$('.image-preview-clear').click(function(){
+				$('.image-preview').attr("data-content","").popover('hide');
+				$('.image-preview-filename').val("");
+				$('.image-preview-clear').hide();
+				$('.image-preview-input input:file').val("");
+				$(".image-preview-input-title").text("Browse");
+			});
+			// Create the preview image
+			$(".image-preview-input input:file").change(function (){
+				var img = $('<img/>', {
+					id: 'dynamic',
+					width:250,
+					height:200
+				});
+				var file = this.files[0];
+				var reader = new FileReader();
+				// Set preview image into the popover data-content
+				reader.onload = function (e) {
+					$(".image-preview-input-title").text("Change");
+					$(".image-preview-clear").show();
+					$(".image-preview-filename").val(file.name);
+					img.attr('src', e.target.result);
+					$(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+				}
+				reader.readAsDataURL(file);
+			});
+		});
 	});
 </script>
 

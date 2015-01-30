@@ -25,55 +25,6 @@ class Ohadmin extends Admin_Controller {
         $this->load->view('masterpage/master', $data);
     }
 
-	public function category() {
-		if (!$this->checkSession()) {
-			redirect('authentication/login');
-			exit();
-		}
-		//$data['pages']  = $this->mod_ohadmin->findAll();
-		$data['title']  = "ILocationCambodia Backend";
-		$data['page']   = 'ohadmin/category';
-		$data['action'] = 'Category';
-		$this->load->view('masterpage/master', $data);
-	}
-
-	public function company() {
-		if (!$this->checkSession()) {
-			redirect('authentication/login');
-			exit();
-		}
-		//$data['pages']  = $this->mod_ohadmin->findAll();
-		$data['title']  = "ILocationCambodia Backend";
-		$data['page']   = 'ohadmin/company';
-		$data['action'] = 'Company';
-		$this->load->view('masterpage/master', $data);
-	}
-
-
-	public function contact() {
-		if (!$this->checkSession()) {
-			redirect('authentication/login');
-			exit();
-		}
-		//$data['pages']  = $this->mod_ohadmin->findAll();
-		$data['title']  = "ILocationCambodia Backend";
-		$data['page']   = 'ohadmin/contact';
-		$data['action'] = 'Contact';
-		$this->load->view('masterpage/master', $data);
-	}
-
-    public function approve($id) {
-        $this->mod_ohadmin->approve($id);
-
-        redirect('ohadmin/index');
-    }
-
-    public function pending($id) {
-        $this->mod_ohadmin->pending($id);
-
-        redirect('ohadmin/index');
-    }
-
     public function checkSession() {
         if ($this->session->userdata('ohadmin')) {
             return TRUE;
@@ -82,6 +33,12 @@ class Ohadmin extends Admin_Controller {
             return FALSE;
         }
     }
+
+	public function logout(){
+		$this->session->set_flashdata('message', 'You have been logged out.');
+		$this->session->unset_userdata('ohadmin');
+		redirect('authentication/login');
+	}
 
     public function delete($id) {
         $this->mod_ohadmin->delete($id);

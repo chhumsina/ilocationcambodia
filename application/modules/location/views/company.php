@@ -26,7 +26,7 @@
 						echo "lat:".$company['latitude'].",";
 						echo "lon:".$company['longitude'].",";
 						echo "html:'<b>".$company['title']."</b><br/><br/><p>Email: ".$company['email']."</p><p>Website: ".$company['website']."</p><p>Phone 1: ".$company['phone_1']."</p><p>Phone 2: ".$company['phone_2']."</p><p>Address: ".$company['address']."</p><p>Description:  ".$company['description']."</p>',";
-						echo "icon:'http://www.deposits.org/logos/dp5311c3beb13a3.JPG'";
+						echo "icon:'".$company['com_logo']."'";
 						echo "},";
 					}
 				echo ']';

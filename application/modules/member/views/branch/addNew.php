@@ -1,20 +1,9 @@
 
-<form class="form-horizontal formValidator" role="form" action="<?php echo BASE_URL;?>ohadmin/branch/create" method="POST">
-	<div class="form-group">
-		<label for="bra_company" class="col-md-2 control-label">Company *</label>
-		<div class="col-md-3">
-			<select name="bra_company" class="form-control">
-				<?php
-					foreach ($companies->result_array() as $company) {
-						echo '<option value="'.$company['com_id'].'">'.$company['company_name'].'</option>';
-					}
-				?>
-			</select>
-		</div>
-	</div>
+<form class="form-horizontal formValidator" role="form" action="<?php echo BASE_URL;?>member/branch/create" method="POST">
     <div class="form-group">
         <label for="pro_title" class="col-md-2 control-label">Title *</label>
         <div class="col-md-8">
+            <input type="hidden" class="form-control" placeholder="" value="<?php echo $this->session->userdata('comId');?>" name="com_id">
             <input type="input" class="form-control required" id="bra_title" placeholder="" value="" name="bra_title">
         </div>
     </div>
@@ -73,11 +62,10 @@
 		</div>
 		<br/>
 		<input type="hidden" class="gllpLatitude form-control map-input" value="0" name="bra_latitude"/>  <input type="hidden" class="gllpLongitude form-control map-input" name="bra_longitude" value="0"/>
-
     <div class="form-group">
         <label for="pro_approve" class="col-md-2 control-label">Approve</label>
         <div class="col-md-2">
-			<select name="pro_approve" class="form-control">
+			<select name="approve" class="form-control">
 				<option value="1">
 					Yes
 				</option>
@@ -90,7 +78,7 @@
     <div class="form-group">
         <div class="col-md-2 col-md-offset-2">
             <input type="submit" name="btn_submit" class="btn btn-primary" value="Submit"/>
-			<a href="<?php echo BASE_URL;?>ohadmin/branch" class="btn btn-default">Back</a>
+			<a href="<?php echo BASE_URL;?>member/branch" class="btn btn-default">Back</a>
         </div>
     </div>
 </form>
