@@ -33,7 +33,7 @@
 						echo "<td>".substr($branch['address'],0,10)."</td>";
 						echo "<td>".substr($branch['description'],0,10)."</td>";
 						echo "<td>";
-						if($branch[field('approve')] == 0) {
+						if($branch[field('bra_approve')] == 0) {
 							echo "<a class='' href='".BASE_URL."member/branch/pending/".$branch['branch_id']."'><span class='btn btn-warning btn-sm glyphicon glyphicon-exclamation-sign'></span></a> ";
 						}else {
 							echo "<a class='' href='".BASE_URL."member/branch/approve/".$branch['branch_id']."'><span class='btn btn-success btn-sm glyphicon glyphicon-ok'></span></a> ";

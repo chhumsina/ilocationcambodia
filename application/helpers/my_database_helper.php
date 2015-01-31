@@ -43,6 +43,7 @@ if (!function_exists('field')) {
 		$field['address']  = 'address';
 		$field['description']  = 'description';
 		$field['user_id']  = 'user_id';
+		$field['bra_approve']  = 'bra_approve';
 
 
         $field['gender']  = 'gender';

@@ -90,8 +90,8 @@ class Company extends Admin_Controller {
 			$config['new_image'] = 'thumb_'.$this->img_name;
 			$config['overwrite'] = TRUE;
 			$config['maintain_ratio'] = TRUE;
-			$config['width'] = 210;
-			$config['height'] = 190;
+			$config['width'] = 35;
+			$config['height'] = 35;
 
 			$this->load->library('image_lib', $config);
 

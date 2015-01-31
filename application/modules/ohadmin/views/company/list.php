@@ -14,7 +14,7 @@
 						<th>Logo</th>
 						<th>User name</th>
 						<th>Email</th>
-						<th>Category</th>
+<!--						<th>Category</th>-->
 						<th>Action</th>
 					</tr>
 					</thead>
@@ -29,12 +29,12 @@
 						echo "<td>".$company['com_logo']."</td>";
 						echo "<td>".$company['use_name']."</td>";
 						echo "<td>".$company['email']."</td>";
-						echo "<td>".$company['cat_name']."</td>";
+						//echo "<td>".$company['cat_name']."</td>";
 						echo "<td>";
-						if($company[field('approve')] == 1) {
-							echo "<a class='' href='".BASE_URL."ohadmin/company/approve/".$company['com_id']."'><span class='btn btn-success btn-sm glyphicon glyphicon-ok'></span></a> ";
-						}else {
+						if($company[field('approve')] == 0) {
 							echo "<a class='' href='".BASE_URL."ohadmin/company/pending/".$company['com_id']."'><span class='btn btn-warning btn-sm glyphicon glyphicon-exclamation-sign'></span></a> ";
+						}else {
+							echo "<a class='' href='".BASE_URL."ohadmin/company/approve/".$company['com_id']."'><span class='btn btn-success btn-sm glyphicon glyphicon-ok'></span></a> ";
 						}
 						echo "<a class='confirm-delete' href='".BASE_URL."ohadmin/company/delete/".$company['com_id']."'><span class='btn btn-danger btn-sm glyphicon glyphicon-trash'></span></a></td>";
 						echo "</tr></a>";

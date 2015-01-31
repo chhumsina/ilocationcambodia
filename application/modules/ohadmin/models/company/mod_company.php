@@ -6,7 +6,7 @@ class mod_company extends CI_Model {
 	public function getAllCompanies() {
 		$this->db->select('*');
 		$this->db->from(table('ilc_companies'));
-		$this->db->join('ilc_categories', 'ilc_companies.cat_id = ilc_categories.cat_id', 'left');
+		//$this->db->join('ilc_categories', 'ilc_companies.cat_id = ilc_categories.cat_id', 'left');
 		return $this->db->get();
 	}
 
@@ -59,7 +59,8 @@ class mod_company extends CI_Model {
 				field('use_password') => $password,
 				field('re_password') => $repassword,
 				field('com_logo') => $image,
-				field('com_name') => $com_name
+				field('com_name') => str_replace(" ","_",ucwords($com_name)),
+				field('utype_id') => 2
 		);
 		if ($this->db->insert(table('ilc_companies'), $data)) {
 			return TRUE;

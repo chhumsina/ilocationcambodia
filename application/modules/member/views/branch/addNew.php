@@ -61,9 +61,15 @@
 			</div>
 		</div>
 		<br/>
-		<input type="hidden" class="gllpLatitude form-control map-input" value="0" name="bra_latitude"/>  <input type="hidden" class="gllpLongitude form-control map-input" name="bra_longitude" value="0"/>
+		<div class="row map-form" style="display: none;">
+			<label for="pro_title" class="col-md-2 control-label">Lat/Lon/Zoom</label>
+			<div class="col-md-8">
+				<input type="text" class="gllpLatitude form-control map-input" value="0" name="bra_latitude"/> / <input type="text" class="gllpLongitude form-control map-input" name="bra_longitude" value="0"/> / <input type="text" class="gllpZoom form-control map-input" value="15"/> <input type="button" class="gllpUpdateButton btn btn-primary map-input" value="Update">
+			</div>
+		</div>
+	</div>
     <div class="form-group">
-        <label for="pro_approve" class="col-md-2 control-label">Approve</label>
+        <label for="approve" class="col-md-2 control-label">Approve</label>
         <div class="col-md-2">
 			<select name="approve" class="form-control">
 				<option value="1">

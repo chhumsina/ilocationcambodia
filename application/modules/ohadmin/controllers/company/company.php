@@ -86,21 +86,21 @@ class Company extends Admin_Controller {
 		redirect('ohadmin/company');
 	}
 
-    public function delete($com_id='') {
+	public function delete($cat_id='') {
 
-        $this->mod_company->delete($com_id);
-
-        redirect('ohadmin/company');
-    }
-
-	public function approve($com_id='') {
-		$this->mod_company->approve($com_id);
+		$this->mod_company->delete($cat_id);
 
 		redirect('ohadmin/company');
 	}
 
-	public function pending($com_id='') {
-		$this->mod_company->pending($com_id);
+	public function approve($cat_id='') {
+		$this->mod_company->approve($cat_id);
+
+		redirect('ohadmin/company');
+	}
+
+	public function pending($cat_id='') {
+		$this->mod_company->pending($cat_id);
 
 		redirect('ohadmin/company');
 	}

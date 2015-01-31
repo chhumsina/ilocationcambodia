@@ -3,7 +3,8 @@
 		<div class="box first">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Category</h2>
+					<h1>Category</h1>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, dummy text of the printing and typesetting industry</p>
 					<?php
 					foreach ($categories->result_array() as $category) {
 						echo '<a class="badge" href="'.BASE_URL.'category/'.strtolower($category['cat_name']).'" title="'.$category['cat_name'].'">'.$category['cat_name'].'</a> ';
@@ -50,7 +51,7 @@
 							<a href="#" target="_parent"></a>
 
 							<h4 class="media-heading">
-								<a href="#" target="_parent"><?php echo $company['com_name'];?></a></h4>
+								<a href="#" target="_parent"><?php echo str_replace("_"," ",$company['com_name']);?></a></h4>
 
 
 							<ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
@@ -73,7 +74,7 @@
 						<div class="media-body fnt-smaller">
 
 							<h4 class="media-heading">
-								<a href="#" target="_parent">'.$company["com_name"].'</a></h4>
+								<a href="#" target="_parent">'.str_replace("_"," ",$company['com_name']).'</a></h4>
 
 
 							<ul class="list-inline mrg-0 btm-mrg-10 clr-535353">

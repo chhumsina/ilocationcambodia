@@ -22,6 +22,11 @@ class Location extends Site_Controller {
 	public function show($company='') {
 		if(!empty($company)) {
 			$data['companies'] = $this->mod_company->findByName($company);
+			foreach ($data['companies']->result_array() as $name) {
+				$data['name'] = $name['com_name'];
+				$data['image'] = $name['com_logo'];
+				$data['description'] = $name['description'];
+			}
 			if($data['companies']->num_rows()>0) {
 				$data['title']  = $company;
 				$data['page']   = 'location/company';

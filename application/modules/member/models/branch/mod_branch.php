@@ -24,7 +24,7 @@ class mod_branch extends CI_Model {
 				field('description') => $description,
 				field('longitude') => $longitude,
 				field('latitude') => $latitude,
-				field('approve') => $approve,
+				field('bra_approve') => $approve,
 				field('com_id') =>  $company	,
 		);
 		if ($this->db->insert(table('ilc_branches'), $data)) {
@@ -58,7 +58,7 @@ class mod_branch extends CI_Model {
 				field('description') => $description,
 				field('longitude') => $longitude,
 				field('latitude') => $latitude,
-				field('approve') => $approve,
+				field('bra_approve') => $approve,
 				field('com_id') =>  $company	,
 		);
 		$this->db->where(field('branch_id'), $bra_id);
@@ -86,7 +86,7 @@ class mod_branch extends CI_Model {
 	// approve
 	public function approve($bra_id) {
 		$data = array(
-				field('approve') => 0,
+				field('bra_approve') => 0,
 		);
 		$this->db->where(field('branch_id'), $bra_id);
 		if ($this->db->update(table('ilc_branches'), $data)) {
@@ -101,7 +101,7 @@ class mod_branch extends CI_Model {
 	// pending
 	public function pending($bra_id) {
 		$data = array(
-				field('approve') => 1,
+				field('bra_approve') => 1,
 		);
 		$this->db->where(field('branch_id'), $bra_id);
 		if ($this->db->update(table('ilc_branches'), $data)) {

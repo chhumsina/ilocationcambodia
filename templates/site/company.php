@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title><?php echo (empty($title) ? '' : $title . ' - ') . TITLE; ?></title>
+        <title><?php echo (empty($title) ? '' : ucwords(str_replace("_"," ",$title)) . ' - ') . TITLE; ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- styles -->

@@ -1,5 +1,31 @@
 		<section id="menu" class="row map_content">
-			<h2 class="two columns mobile-one">Menu</h2>
+
+
+			<!-- Begin Listing: 609 W GRAVERS LN-->
+			<div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing" style="margin-left: -15px; margin-right: -44px;">
+				<div class="media">
+					<a class="pull-left" href="#" target="_parent">
+						<img  alt="<?php echo $image;?>" src="<?php echo IMAGE_PATH.$image;?>" title="<?php echo $image;?>"></a>
+
+					<div class="clearfix visible-sm"></div>
+
+					<div class="media-body fnt-smaller">
+						<a href="#" target="_parent"></a>
+
+						<h4 class="media-heading">
+							<a href="#" target="_parent"><?php echo str_replace('_',' ',ucwords($name));?></a></h4>
+
+
+						<ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+							<li>24 Branches</li>
+						</ul>
+
+						<p class="hidden-xs"><?php echo $description;?></p>
+					</div>
+				</div>
+			</div><!-- End Listing-->
+			</div>
+
 			<div class="four columns menu mobile-two">
 				<ul class="tabs-content">
 					<li class="active" id="example3Tab">
@@ -26,7 +52,7 @@
 						echo "lat:".$company['latitude'].",";
 						echo "lon:".$company['longitude'].",";
 						echo "html:'<b>".$company['title']."</b><br/><br/><p>Email: ".$company['email']."</p><p>Website: ".$company['website']."</p><p>Phone 1: ".$company['phone_1']."</p><p>Phone 2: ".$company['phone_2']."</p><p>Address: ".$company['address']."</p><p>Description:  ".$company['description']."</p>',";
-						echo "icon:'".IMAGE_PATH.$company['com_logo']."'";
+						echo "icon:'".IMAGE_PATH.'thumb_'.$company['com_logo']."'";
 						echo "},";
 					}
 				echo ']';
