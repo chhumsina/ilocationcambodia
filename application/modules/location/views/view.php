@@ -18,16 +18,84 @@
 <section id="company">
 	<div class="container">
 		<div class="box first">
-			<div class="row">
-				<div class="col-md-12">
-					<h2>Company</h2>
-					<?php
-					foreach ($companies->result_array() as $company) {
-						echo '<a class="badge" href="'.BASE_URL.'company/'.strtolower($company['com_name']).'" title="'.$company['com_name'].'">'.$company['com_name'].'</a> ';
-					}
-					?>
-				</div><!--/.col-md-12-->
-			</div><!--/.row-->
+		<div class="container container-pad" id="property-listings">
+
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Company</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, dummy text of the printing and typesetting industry</p>
+			</div>
+			<br/>
+		</div>
+
+		<div class="row">
+		<div class="col-sm-6">
+			<?php
+			$row = 0;
+			$collectContent= null;
+			foreach ($companies->result_array() as $company) {
+				 $row++;
+				if($row%2 == 1) {
+			?>
+				<!-- Begin Listing: 609 W GRAVERS LN-->
+
+				<div class="clickableRow brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing" <?php echo 'href="'.BASE_URL.'company/'.strtolower($company['com_name']).'" title="'.$company['com_name'].'"';?>>
+					<div class="media">
+						<a class="pull-left" href="" target="_parent">
+							<img  alt="<?php echo $company['com_logo'];?>" src="<?php echo IMAGE_PATH.$company['com_logo'];?>" title="<?php echo $company['com_logo'];?>"></a>
+
+						<div class="clearfix visible-sm"></div>
+
+						<div class="media-body fnt-smaller">
+							<a href="#" target="_parent"></a>
+
+							<h4 class="media-heading">
+								<a href="#" target="_parent"><?php echo $company['com_name'];?></a></h4>
+
+
+							<ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+								<li>43 Branches</li>
+							</ul>
+
+							<p class="hidden-xs"><?php echo $company['description'];?></p><span class="fnt-smaller fnt-lighter fnt-arial">dummy text of the printing and typesetting industry,</span>
+						</div>
+					</div>
+				</div><!-- End Listing-->
+			<?php
+				}else {
+					$collectContent = '<div href="'.BASE_URL.'company/'.strtolower($company['com_name']).'" title="'.$company['com_name'].'" class="clickableRow brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+					<div class="media">
+						<a class="pull-left" href="" target="_parent">
+							<img title="'. $company["com_logo"].'" alt="'. $company["com_logo"].'" class="img-responsive" src="'. IMAGE_PATH.$company["com_logo"].'"></a>
+
+						<div class="clearfix visible-sm"></div>
+
+						<div class="media-body fnt-smaller">
+
+							<h4 class="media-heading">
+								<a href="#" target="_parent">'.$company["com_name"].'</a></h4>
+
+
+							<ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+								<li>43 Branches</li>
+							</ul>
+
+							<p class="hidden-xs">'. $company["description"].'</p><span class="fnt-smaller fnt-lighter fnt-arial">dummy text of the printing and typesetting industry,</span>
+						</div>
+					</div>
+				</div>'.$collectContent;
+				}
+
+			}
+			?>
+
+		</div>
+
+		<div class="col-sm-6">
+			<?php echo $collectContent;?>
+		</div><!-- End Col -->
+		</div><!-- End row -->
+		</div><!-- End container -->
 		</div><!--/.box-->
 	</div><!--/.container-->
 </section><!--/#services-->

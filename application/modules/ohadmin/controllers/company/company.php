@@ -51,9 +51,10 @@ class Company extends Admin_Controller {
 			$user_name        = $_POST['user_name'];
 			$password        = md5($_POST['password']);
 			$repassword        = $_POST['password'];
+			$image        = 'no-image.png';
 			$com_name        = $_POST['com_name'];
 
-            $this->mod_company->create($cat_name, $user_name, $password, $repassword, $com_name);
+            $this->mod_company->create($cat_name, $user_name, $password, $repassword, $image, $com_name);
         }
         redirect('ohadmin/company');
     }
@@ -77,9 +78,10 @@ class Company extends Admin_Controller {
 			$com_name        = $_POST['com_name'];
 			$user_name        = $_POST['user_name'];
 			$password        = $_POST['password'];
+			$image        = 'no-image.png';
 			$approve        = $_POST['approve'];
 
-			$this->mod_company->update($cat_id, $com_id, $com_name, $user_name, $password, $approve);
+			$this->mod_company->update($cat_id, $com_id, $com_name, $user_name, $password, $image, $approve);
 		}
 		redirect('ohadmin/company');
 	}

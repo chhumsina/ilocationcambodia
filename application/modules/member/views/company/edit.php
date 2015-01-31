@@ -1,6 +1,7 @@
 <?php
 	foreach ($companies->result_array() as $company) {
 		$com_id = $company[field('com_id')];
+		$image = $company[field('com_logo')];
 		$com_name = $company[field('com_name')];
 		$user_name = $company[field('use_name')];
 		$email = $company[field('email')];
@@ -10,7 +11,7 @@
 		$approve = $company[field('approve')];
 	}
 ?>
-<form class="form-horizontal formValidator companyForm" role="form" action="<?php echo BASE_URL;?>member/company/update" method="POST">
+<form enctype="multipart/form-data" class="form-horizontal formValidator companyForm" role="form" action="<?php echo BASE_URL;?>member/company/update" method="POST">
 	<div class="form-group">
 		<input type="hidden" value="<?php echo $com_id; ?>" name="com_id"/>
 		<label for="cat_name" class="col-md-2 control-label">Category *</label>
@@ -39,7 +40,8 @@
                     <div class="btn btn-default image-preview-input">
 						<span class="glyphicon glyphicon-folder-open"></span>
 						<span class="image-preview-input-title">Browse</span>
-						<input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+						<input type="file" accept="image/png, image/jpeg, image/gif" name="com_logo"/> <!-- rename it -->
+						<input type="hidden" value="<?php echo $image;?>" name="com_logo"/>
 					</div>
                 </span>
 			</div><!-- /input-group image-preview [TO HERE]-->

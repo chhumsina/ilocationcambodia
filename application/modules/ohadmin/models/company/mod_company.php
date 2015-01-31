@@ -52,12 +52,13 @@ class mod_company extends CI_Model {
 	}
 
 	// create
-	public function create($cat_name, $user_name, $password,$repassword, $com_name) {
+	public function create($cat_name, $user_name, $password, $repassword, $image, $com_name) {
 		$data = array(
 				field('cat_id') => $cat_name,
 				field('use_name') => $user_name,
 				field('use_password') => $password,
 				field('re_password') => $repassword,
+				field('com_logo') => $image,
 				field('com_name') => $com_name
 		);
 		if ($this->db->insert(table('ilc_companies'), $data)) {
@@ -79,7 +80,7 @@ class mod_company extends CI_Model {
 	}
 
 	// Update
-	public function update($cat_id, $com_id, $com_name, $user_name, $password, $approve) {
+	public function update($cat_id, $com_id, $com_name, $user_name, $password, $image, $approve) {
 
 		$data = array(
 				field('cat_id') => $cat_id,
@@ -87,6 +88,7 @@ class mod_company extends CI_Model {
 				field('com_name') => $com_name,
 				field('use_name') => $user_name,
 				field('use_password') => md5($password),
+				field('com_logo') => $image,
 				field('approve') => $approve,
 		);
 		$this->db->where(field('com_id'), $com_id);

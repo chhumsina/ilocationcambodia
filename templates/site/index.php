@@ -64,6 +64,14 @@
 				}
 			})
 		});
+
+		$(document).ready(function() {
+
+			$(".clickableRow").click(function() {
+				console.log(window.document.location = $(this).attr("href"));
+
+			});
+		});
 	</script>
 
 	<?php include 'login.php';?>

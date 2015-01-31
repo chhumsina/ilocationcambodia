@@ -59,7 +59,7 @@
 <!-- /.navbar-header -->
 
 <ul class="nav navbar-top-links navbar-right">
-	<li><a href="<?php echo BASE_URL;?>member/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+	<li><a href="<?php echo BASE_URL;?><?php if ($this->session->userdata('ohadmin')) {echo 'ohadmin';}else{echo 'member';}?>/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
 </ul>
 <!-- /.navbar-top-links -->
 

@@ -52,7 +52,8 @@ define('TITLE', 'I Location Cambodia');
 
 define('LAYOUT_SITE_PATH', 'templates/site/');
 define('TEMPLATE_SITE_PATH', BASE_URL . 'templates/site/');
-define('IMAGE_PATH', BASE_URL . 'images/');
+define('IMAGE_PATH', BASE_URL . 'uploads/logo/');
+define('IMAGE_PATH_DEFAULT', BASE_URL . 'uploads/no-image.png');
 
 define('ASSETS_TEMPLATE',	BASE_URL.'templates/assets/');
 
