@@ -7,6 +7,7 @@ class mod_company extends CI_Model {
 		$this->db->from(table('ilc_companies'));
 		$this->db->where(field('approve'), 1);
 		$this->db->where(field('utype_id'), 2);
+		$this->db->where(field('publish'), 1);
 		return $this->db->get();
 	}
 

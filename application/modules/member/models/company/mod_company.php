@@ -80,7 +80,7 @@ class mod_company extends CI_Model {
 	}
 
 	// Update
-	public function update($cat_id, $com_id, $com_name, $user_name, $email, $phone_1, $phone_2, $image, $description, $approve) {
+	public function update($cat_id, $com_id, $com_name, $user_name, $email, $phone_1, $phone_2, $image, $description, $publish, $approve) {
 
 		$data = array(
 				field('cat_id') => $cat_id,
@@ -92,6 +92,7 @@ class mod_company extends CI_Model {
 				field('phone_2') => $phone_2,
 				field('com_logo') => $image,
 				field('description') => $description,
+				field('publish') => $publish,
 				field('approve') => $approve,
 		);
 		$this->db->where(field('com_id'), $com_id);

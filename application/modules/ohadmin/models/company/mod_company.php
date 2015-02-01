@@ -6,6 +6,7 @@ class mod_company extends CI_Model {
 	public function getAllCompanies() {
 		$this->db->select('*');
 		$this->db->from(table('ilc_companies'));
+		$this->db->where(field('utype_id'), 2);
 		//$this->db->join('ilc_categories', 'ilc_companies.cat_id = ilc_categories.cat_id', 'left');
 		return $this->db->get();
 	}

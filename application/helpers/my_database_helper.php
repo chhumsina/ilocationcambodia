@@ -55,6 +55,7 @@ if (!function_exists('field')) {
         $field['com_name']  = 'com_name';
         $field['cat_id']  = 'cat_id';
         $field['deleted']  = 'deleted';
+        $field['publish']  = 'publish';
 
         $field['cat_id']  = 'cat_id';
         $field['cat_name']  = 'cat_name';

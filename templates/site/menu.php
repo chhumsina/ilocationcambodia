@@ -10,10 +10,10 @@
 	</div>
 	<div class="collapse navbar-collapse">
 		<ul class="nav navbar-nav">
-			<li><a href="#home"><i class="icon-home"></i></a></li>
-			<li><a href="#category"><i class="icon-qrcode"></i> Category</a></li>
-			<li><a href="#company"><i class="icon-credit-card"></i> Company</a></li>
-			<li><a href="#contact"><i class="icon-envelope-alt"></i> Contact</a></li>
+			<li><a href="<?php if($this->uri->segment(1)=='company'){echo BASE_URL;}?>#home"><i class="icon-home"></i></a></li>
+			<li><a href="<?php if($this->uri->segment(1)=='company'){echo BASE_URL;}?>#category"><i class="icon-qrcode"></i> Category</a></li>
+			<li><a href="<?php if($this->uri->segment(1)=='company'){echo BASE_URL;}?>#company"><i class="icon-credit-card"></i> Company</a></li>
+			<li><a href="<?php if($this->uri->segment(1)=='company'){echo BASE_URL;}?>#contact"><i class="icon-envelope-alt"></i> Contact</a></li>
 			<li><?php if ($this->session->userdata('useName')) {
 					echo '<a id="dashboard" href="'.BASE_URL.'member"><i class="icon-dashboard"></i> Dashboard</a>';
 				}else{

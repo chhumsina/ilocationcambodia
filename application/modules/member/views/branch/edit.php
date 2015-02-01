@@ -10,7 +10,7 @@
 		$phone_2 = $branch[field('phone_2')];
 		$address = $branch[field('address')];
 		$description = $branch[field('description')];
-		$approve = $branch[field('approve')];
+		$approve = $branch[field('bra_approve')];
 	}
 ?>
 

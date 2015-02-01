@@ -45,7 +45,7 @@ class Company extends Admin_Controller {
 				$this->img_name = $_POST['com_logo'];
 			}
 
-			$cat_id       = $_POST['cat_id'];
+			$cat_id       = $_POST['cat_name'];
 			$com_id       = $_POST['com_id'];
 			$com_name        = $_POST['com_name'];
 			$user_name        = $_POST['user_name'];
@@ -54,9 +54,10 @@ class Company extends Admin_Controller {
 			$phone_2        = $_POST['phone_2'];
 			$image        = $this->img_name;
 			$description        = $_POST['description'];
-			$approve        = $_POST['approve'];
+			$publish        = $_POST['publish'];
+			$approve        = 1;
 
-			$this->mod_company->update($cat_id, $com_id, $com_name, $user_name, $email, $phone_1, $phone_2, $image, $description, $approve);
+			$this->mod_company->update($cat_id, $com_id, $com_name, $user_name, $email, $phone_1, $phone_2, $image, $description, $publish, $approve);
 			$this->session->set_userdata('ms_succss', MSG_SUCCUSS);
 		}
 		redirect('member/company');

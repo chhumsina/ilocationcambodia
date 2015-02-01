@@ -2,13 +2,13 @@
 	foreach ($companies->result_array() as $company) {
 		$com_id = $company[field('com_id')];
 		$image = $company[field('com_logo')];
-		$com_name = $company[field('com_name')];
+		$com_name = str_replace('_',' ',$company[field('com_name')]);
 		$user_name = $company[field('use_name')];
 		$email = $company[field('email')];
 		$phone_1 = $company[field('phone_1')];
 		$phone_2 = $company[field('phone_2')];
 		$description = $company[field('description')];
-		$approve = $company[field('approve')];
+		$publish = $company[field('publish')];
 	}
 ?>
 <form enctype="multipart/form-data" class="form-horizontal formValidator companyForm" role="form" action="<?php echo BASE_URL;?>member/company/update" method="POST">
@@ -84,13 +84,13 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="approve" class="col-md-2 control-label">Publish</label>
+		<label for="publish" class="col-md-2 control-label">Publish</label>
 		<div class="col-md-2">
-			<select name="approve" class="form-control">
-				<option value="1"  <?php if($approve ==1){echo 'selected';}?>>
+			<select name="publish" class="form-control">
+				<option value="1"  <?php if($publish ==1){echo 'selected';}?>>
 					Yes
 				</option>
-				<option value="0" <?php if($approve ==0){echo 'selected';}?>>
+				<option value="0" <?php if($publish ==0){echo 'selected';}?>>
 					No
 				</option>
 			</select>

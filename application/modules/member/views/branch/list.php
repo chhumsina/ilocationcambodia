@@ -6,6 +6,10 @@
 		<!-- /.panel-heading -->
 		<div class="panel-body">
 			<div class="dataTable_wrapper">
+				<?php
+				if($branches->num_rows() > 0) {
+
+				?>
 				<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 					<thead>
 					<tr>
@@ -44,6 +48,11 @@
 					?>
 					</tbody>
 				</table>
+				<?php
+				}else {
+					echo '<p>There is no Branch.</p>';
+				}
+				?>
 			</div>
 		</div>
 		<!-- /.col-lg-12 -->

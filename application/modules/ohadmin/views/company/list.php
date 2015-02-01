@@ -6,6 +6,10 @@
 		<!-- /.panel-heading -->
 		<div class="panel-body">
 			<div class="dataTable_wrapper">
+				<?php
+				if($companies->num_rows() > 0) {
+
+				?>
 				<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 					<thead>
 					<tr>
@@ -25,8 +29,8 @@
 						$tr = $tr + 1;
 						echo "<tr class='clickableRow' href='".BASE_URL."ohadmin/company/edit/".$company['com_id']."'>";
 						echo "<td>".$tr."</td>";
-						echo "<td>".$company['com_name']."</td>";
-						echo "<td>".$company['com_logo']."</td>";
+						echo "<td>".str_replace('_',' ',$company['com_name'])."</td>";
+						echo "<td><img src='".IMAGE_PATH.'thumb_'.$company['com_logo']."'/></td>";
 						echo "<td>".$company['use_name']."</td>";
 						echo "<td>".$company['email']."</td>";
 						//echo "<td>".$company['cat_name']."</td>";
@@ -42,6 +46,11 @@
 					?>
 					</tbody>
 				</table>
+				<?php
+				}else{
+					echo '<p>There is no Category.</p>';
+				}
+				?>
 			</div>
 		</div>
 		<!-- /.col-lg-12 -->

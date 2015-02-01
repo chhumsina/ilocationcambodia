@@ -40,7 +40,7 @@
 			?>
 				<!-- Begin Listing: 609 W GRAVERS LN-->
 
-				<div class="clickableRow brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing" <?php echo 'href="'.BASE_URL.'company/'.strtolower($company['com_name']).'" title="'.$company['com_name'].'"';?>>
+				<div class="clickableRow brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing" <?php echo 'href="'.BASE_URL.'company/'.str_replace(' ','_',$company['com_name']).'" title="'.$company['com_name'].'"';?>>
 					<div class="media">
 						<a class="pull-left" href="" target="_parent">
 							<img  alt="<?php echo $company['com_logo'];?>" src="<?php echo IMAGE_PATH.$company['com_logo'];?>" title="<?php echo $company['com_logo'];?>"></a>
@@ -64,7 +64,7 @@
 				</div><!-- End Listing-->
 			<?php
 				}else {
-					$collectContent = '<div href="'.BASE_URL.'company/'.strtolower($company['com_name']).'" title="'.$company['com_name'].'" class="clickableRow brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+					$collectContent = '<div href="'.BASE_URL.'company/'.str_replace(' ','_',$company['com_name']).'" title="'.$company['com_name'].'" class="clickableRow brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
 					<div class="media">
 						<a class="pull-left" href="" target="_parent">
 							<img title="'. $company["com_logo"].'" alt="'. $company["com_logo"].'" class="img-responsive" src="'. IMAGE_PATH.$company["com_logo"].'"></a>
