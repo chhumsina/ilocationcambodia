@@ -22,15 +22,15 @@ class Verify extends Site_Controller {
 					'protocol' => 'smtp',
 					'smtp_host' => 'ssl://smtp.googlemail.com',
 					'smtp_port' => 465,
-					'smtp_user' => 'sinachhum.cist@gmail.com', // change it to yours
-					'smtp_pass' => 'weG689FnyT', // change it to yours
+					'smtp_user' => '', // change it to yours
+					'smtp_pass' => '', // change it to yours
 					'mailtype' => 'html',
 					'charset' => 'iso-8859-1',
 					'wordwrap' => TRUE
 			);
 			$this->load->library('email', $config);
 			$this->email->set_newline("\r\n");
-			$this->email->from('sinachhum.cist@gmail.com');
+			$this->email->from('');
 			$this->email->to($email);
 			$this->email->subject('IlocationCambodia, Account information!');
 			$message = $this->load->view('member/email', $verify, TRUE);

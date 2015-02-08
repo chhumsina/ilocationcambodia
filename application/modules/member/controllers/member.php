@@ -79,8 +79,8 @@ class Member extends Site_Controller {
 						'protocol' => 'smtp',
 						'smtp_host' => 'ssl://smtp.googlemail.com',
 						'smtp_port' => 465,
-						'smtp_user' => 'sinachhum.cist@gmail.com', // change it to yours
-						'smtp_pass' => 'weG689FnyT', // change it to yours
+						'smtp_user' => '', // change it to yours
+						'smtp_pass' => '', // change it to yours
 						'mailtype' => 'html',
 						'charset' => 'iso-8859-1',
 						'wordwrap' => TRUE
@@ -88,7 +88,7 @@ class Member extends Site_Controller {
 
 				$this->load->library('email', $config);
 				$this->email->set_newline("\r\n");
-				$this->email->from('sinachhum.cist@gmail.com');
+				$this->email->from('');
 				$this->email->to($email);
 				$this->email->subject('IlocationCambodia, Email verification!');
 				$this->email->message('Please click here to activate your account <a href="' .BASE_URL.'verify/verify_email/'.$activate_code.'">'.$activate_code.'</a>');
