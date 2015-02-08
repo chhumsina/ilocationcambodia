@@ -29,6 +29,8 @@ if (!function_exists('field')) {
         $field['use_name'] 	= 'use_name';
         $field['use_password'] 	= 'use_password';
         $field['re_password'] 	= 're_password';
+        $field['activate_code'] 	= 'activate_code';
+        $field['create_date'] 	= 'create_date';
 
 
         $field['com_id']  = 'com_id';
@@ -59,6 +61,7 @@ if (!function_exists('field')) {
 
         $field['cat_id']  = 'cat_id';
         $field['cat_name']  = 'cat_name';
+        $field['cat_approve']  = 'cat_approve';
         $field['approve']  = 'approve';
 
         if (array_key_exists($key, $field)) {

@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "location";
 $route['company/(:any)'] = "location/show/$1";
+$route['category/(:any)'] = "location/category/$1";
 $route['404_override'] = '';
 
 

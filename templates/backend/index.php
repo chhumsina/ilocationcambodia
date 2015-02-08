@@ -59,6 +59,8 @@
 <!-- /.navbar-header -->
 
 <ul class="nav navbar-top-links navbar-right">
+	<li><a target="_blank" href="<?php echo BASE_URL;?><?php if ($this->session->userdata('ohadmin')) {echo 'ohadmin';}else{echo 'company';}?>/<?php echo ucfirst($this->session->userdata('useName'));?>"><i class="fa fa-user fa-fw"></i> <?php echo ucfirst($this->session->userdata('useName'));?></a></li>
+
 	<li><a href="<?php echo BASE_URL;?><?php if ($this->session->userdata('ohadmin')) {echo 'ohadmin';}else{echo 'member';}?>/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
 </ul>
 <!-- /.navbar-top-links -->
@@ -91,13 +93,13 @@
 				<a href="<?php echo BASE_URL;?>ohadmin/branch"><i class="fa fa-map-marker fa-fw"></i> Branch</a>
 			</li>
 			<li>
-				<a href="<?php echo BASE_URL;?>ohadmin/contact"><i class="fa fa-phone fa-fw"></i> Contact</a>
+				<a href="<?php echo BASE_URL;?>ohadmin/contact"><i class="fa fa-envelope fa-fw"></i> Contact</a>
 			</li>
 			<?php } ?>
 			<?php if ($this->session->userdata('useName')) {?>
-				<li>
-					<a href="<?php echo BASE_URL;?>member/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-				</li>
+<!--				<li>-->
+<!--					<a href="--><?php //echo BASE_URL;?><!--member/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>-->
+<!--				</li>-->
 				<li>
 					<a href="<?php echo BASE_URL;?>member/company"><i class="fa fa-credit-card fa-fw"></i> Company</a>
 				</li>
@@ -105,7 +107,7 @@
 					<a href="<?php echo BASE_URL;?>member/branch"><i class="fa fa-map-marker fa-fw"></i> Branch</a>
 				</li>
 				<li>
-					<a href="<?php echo BASE_URL;?>member/contact"><i class="fa fa-phone fa-fw"></i> Contact</a>
+					<a href="<?php echo BASE_URL;?>member/contact"><i class="fa fa-envelope fa-fw"></i> Contact</a>
 				</li>
 			<?php } ?>
 		</ul>

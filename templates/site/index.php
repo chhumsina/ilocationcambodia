@@ -18,13 +18,19 @@
         <script src="<?php echo ASSETS_TEMPLATE; ?>js/main.js"></script>
         <!-- end js -->
     </head>
-
     
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
 	<section id="home"></section>
     <header id="header" role="banner">
         <div class="container">
 			<?php include 'menu.php';?>
+			<?php
+			if($this->session->flashdata('message')) {
+				echo '<p style="box-shadow: 0 2px 5px #888;	margin-top: -20px;	padding: 10px;" class="alert-success">'.$this->session->flashdata('message').'</p>';
+			}else if($this->session->flashdata('messageError')){
+				echo '<p style="box-shadow: 0 2px 5px #888;	margin-top: -20px;	padding: 10px;" class="alert-danger">'.$this->session->flashdata('messageError').'</p>';
+			}
+			?>
         </div>
     </header><!--/#header-->
 

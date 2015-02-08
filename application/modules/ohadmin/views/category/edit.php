@@ -2,7 +2,7 @@
 	foreach ($categories->result_array() as $category) {
 		$cat_id = $category[field('cat_id')];
 		$cat_name = $category[field('cat_name')];
-		$approve = $category[field('approve')];
+		$approve = $category[field('cat_approve')];
 	}
 ?>
 <form class="form-horizontal formValidate" role="form" action="<?php echo BASE_URL;?>ohadmin/category/update" method="POST">

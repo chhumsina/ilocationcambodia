@@ -23,7 +23,7 @@
 						echo "<td>".$tr."</td>";
 						echo "<td>".$category['cat_name']."</td>";
 						echo "<td>";
-						if($category[field('approve')] == 0) {
+						if($category[field('cat_approve')] == 0) {
 							echo "<a class='' href='".BASE_URL."ohadmin/category/pending/".$category['cat_id']."'><span class='btn btn-warning btn-sm glyphicon glyphicon-exclamation-sign'></span></a> ";
 						}else {
 							echo "<a class='' href='".BASE_URL."ohadmin/category/approve/".$category['cat_id']."'><span class='btn btn-success btn-sm glyphicon glyphicon-ok'></span></a> ";

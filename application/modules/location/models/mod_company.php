@@ -8,12 +8,14 @@ class mod_company extends CI_Model {
 		$this->db->where(field('approve'), 1);
 		$this->db->where(field('utype_id'), 2);
 		$this->db->where(field('publish'), 1);
+		$this->db->order_by(field('com_id'), 'desc');
 		return $this->db->get();
 	}
 
 	public function findAllCategories() {
 		$this->db->select('*');
 		$this->db->from(table('ilc_categories'));
+		$this->db->where(field('cat_approve'), 1);
 		return $this->db->get();
 	}
 

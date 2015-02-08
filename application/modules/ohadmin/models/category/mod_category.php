@@ -6,7 +6,16 @@ class mod_category extends CI_Model {
 	public function getAllCategories() {
 		$this->db->select('*');
 		$this->db->from(table('ilc_categories'));
+		$this->db->order_by(field('cat_id'), 'desc');
 		return $this->db->get();
+	}
+
+	// count
+	public function countAll(){
+		$this->db->from(table('ilc_categories'));
+		$query = $this->db->get();
+		$rowcount = $query->num_rows();
+		return $rowcount;
 	}
 
 	// create
@@ -14,7 +23,7 @@ class mod_category extends CI_Model {
 
 		$data = array(
 				field('cat_name') => $name,
-				field('approve') => $approve
+				field('cat_approve') => $approve
 		);
 		if ($this->db->insert(table('ilc_categories'), $data)) {
 			return TRUE;
@@ -39,7 +48,7 @@ class mod_category extends CI_Model {
 	// approve
 	public function approve($cat_id) {
 		$data = array(
-				field('approve') => 0,
+				field('cat_approve') => 0,
 		);
 		$this->db->where(field('cat_id'), $cat_id);
 		if ($this->db->update(table('ilc_categories'), $data)) {
@@ -54,7 +63,7 @@ class mod_category extends CI_Model {
 	// pending
 	public function pending($cat_id) {
 		$data = array(
-				field('approve') => 1,
+				field('cat_approve') => 1,
 		);
 		$this->db->where(field('cat_id'), $cat_id);
 		if ($this->db->update(table('ilc_categories'), $data)) {
@@ -80,7 +89,7 @@ class mod_category extends CI_Model {
 
 		$data = array(
 			field('cat_name') => $cat_name,
-			field('approve') => $approve,
+			field('cat_approve') => $approve,
 		);
 		$this->db->where(field('cat_id'), $cat_id);
 

@@ -5,7 +5,7 @@
 			<div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing" style="margin-left: -15px; margin-right: -44px;">
 				<div class="media">
 					<a class="pull-left" href="#" target="_parent">
-						<img  alt="<?php echo $image;?>" src="<?php echo IMAGE_PATH.$image;?>" title="<?php echo $image;?>"></a>
+						<img style="height: 165px;"  alt="<?php echo $image;?>" src="<?php echo IMAGE_PATH.$image;?>" title="<?php echo $image;?>"></a>
 
 					<div class="clearfix visible-sm"></div>
 
@@ -21,6 +21,12 @@
 						</ul>
 
 						<p class="hidden-xs"><?php echo $description;?></p>
+						<p>E-mail: <?php echo $email;?></p>
+						<p>Phone 1: <?php echo $phone_1;?></p>
+						<?php if($phone_2) {
+							echo "<p>Phone 2: ".$phone_2."</p>";
+						}
+						?>
 					</div>
 				</div>
 			</div><!-- End Listing-->

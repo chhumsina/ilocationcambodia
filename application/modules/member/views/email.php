@@ -1,11 +1,9 @@
 <?php
-foreach ($mem_verify->result_array() as $mem) {
-	$memName = $mem[field('mem_name')];
-	$memEmail = $mem[field('mem_email')];
-	$memImage = $mem[field('mem_image')];
-	$memPassword = $mem[field('mem_password')];
-	$memPass = $mem[field('mem_pass')];
-	$memDate= $mem[field('mem_create_date')];
+foreach ($email_verify->result_array() as $mem) {
+	$use_name = $mem[field('use_name')];
+	$email = $mem[field('email')];
+	$re_password = $mem[field('re_password')];
+	$date= $mem[field('create_date')];
 }
 ?>
 
@@ -15,11 +13,11 @@ foreach ($mem_verify->result_array() as $mem) {
 	</div>
 	<div style="background: #FEFEFE; border-bottom: 1px dashed #CCC; border-top: 1px dashed #CCC; padding: 10px;">
 		<?php
-		echo '<b>Name:</b> '. str_replace("_", " ", ucfirst($memName)).'<br/>';
-		echo '<b>E-mail:</b> '.$memEmail.'<br/>';
-		echo '<b>Password:</b> '.$memPass.'<br/>';
-		echo '<b>Date created:</b> '.$memDate.'<br/><br/>';
-		echo '<b>Page :</b>'.BASE_URL.'members/'.$memName.'<br/><br/>';
+		echo '<b>Username:</b> '. str_replace("_", " ",$use_name).'<br/>';
+		echo '<b>E-mail:</b> '.$email.'<br/>';
+		echo '<b>Password:</b> '.$re_password.'<br/>';
+		echo '<b>Date created:</b> '.$date.'<br/><br/>';
+		//echo '<b>Page :</b>'.BASE_URL.'members/'.$memName.'<br/><br/>';
 		?>
 	</div>
 	<div style="text-align: center">

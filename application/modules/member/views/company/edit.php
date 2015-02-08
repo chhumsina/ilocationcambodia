@@ -26,7 +26,7 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="com_name" class="col-md-2 control-label">Company name *</label>
+		<label for="com_name" class="col-md-2 control-label">Company logo</label>
 		<div class="col-md-6">
 			<!-- image-preview-filename input [CUT FROM HERE]-->
 			<div class="input-group image-preview">
@@ -48,7 +48,7 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="com_name" class="col-md-2 control-label">Company logo</label>
+		<label for="com_name" class="col-md-2 control-label">Company name *</label>
 		<div class="col-md-6">
 			<input type="input" class="form-control required" id="com_name" placeholder="" value="<?php echo $com_name; ?>" name="com_name">
 		</div>

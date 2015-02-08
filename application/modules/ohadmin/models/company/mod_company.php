@@ -11,6 +11,15 @@ class mod_company extends CI_Model {
 		return $this->db->get();
 	}
 
+	// count
+	public function countAll(){
+		$this->db->from(table('ilc_companies'));
+		$this->db->where(field('utype_id'), 2);
+		$query = $this->db->get();
+		$rowcount = $query->num_rows();
+		return $rowcount;
+	}
+
 	// delete
 	public function delete($com_id) {
 

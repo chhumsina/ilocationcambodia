@@ -11,7 +11,7 @@ class Ohadmin extends Admin_Controller {
             redirect('authentication/login');
         }
 
-        $this->load->model(array('mod_ohadmin'));
+        $this->load->model(array('mod_ohadmin', 'company/mod_company', 'category/mod_category', 'branch/mod_branch'));
     }
 
     public function index() {
@@ -19,6 +19,10 @@ class Ohadmin extends Admin_Controller {
             redirect('authentication/login');
             exit();
         }
+
+		$data['branches'] = $this->mod_branch->countAll();
+		$data['categories'] = $this->mod_category->countAll();
+		$data['companies'] = $this->mod_company->countAll();
         $data['title']  = "ILocationCambodia Backend";
         $data['page']   = 'ohadmin/dashboard';
         $data['action'] = 'Dashboard';

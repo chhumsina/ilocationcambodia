@@ -53,15 +53,19 @@ class mod_company extends CI_Model {
 	}
 
 	// create
-	public function create($user_name, $email, $password, $repassword, $com_name) {
+	public function create($user_name, $email, $password, $repassword, $com_name, $activate_code) {
 		$data = array(
 				field('use_name') => $user_name,
 				field('use_password') => $password,
 				field('re_password') => $repassword,
 				field('com_name') => $com_name,
-				field('email') => $email
+				field('email') => $email,
+				field('utype_id') => 2,
+				field('activate_code') => $activate_code,
+				field('create_date') =>  date('Y-m-d H:i:s'),
 		);
 		if ($this->db->insert(table('ilc_companies'), $data)) {
+
 			return TRUE;
 		}
 		else {

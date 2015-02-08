@@ -9,6 +9,14 @@ class mod_branch extends CI_Model {
 		return $this->db->get();
 	}
 
+	// count
+	public function countAll(){
+		$this->db->from(table('ilc_branches'));
+		$query = $this->db->get();
+		$rowcount = $query->num_rows();
+		return $rowcount;
+	}
+
 	// create
 	public function create($title, $email, $website, $phone_1, $phone_2, $address, $description, $longitude, $latitude, $company) {
 

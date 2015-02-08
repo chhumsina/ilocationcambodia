@@ -14,7 +14,7 @@ class Member extends Site_Controller {
 	 */
 	public function login(){
 		if($this->session->userdata('member')){
-			redirect('member/dashboard');
+			redirect('member/company');
 			exit();
 		}
 		if (isset($_POST['btn_submit'])) {
@@ -22,7 +22,7 @@ class Member extends Site_Controller {
 				$user_name = $_POST['user_name'];
 				$password = md5($_POST['password']);
 				if($this->mod_member->login($user_name, $password)){
-					redirect('member/dashboard');
+					redirect('member/company');
 					exit();
 				}
 				$this->session->set_flashdata('messageError','Invalid Username and Password!');
@@ -58,7 +58,7 @@ class Member extends Site_Controller {
 	}
 
 	public function index(){
-		$this->dashboard();
+		redirect('member/company');
 	}
 
 	// Register
@@ -70,9 +70,35 @@ class Member extends Site_Controller {
 			$password        = md5($_POST['password']);
 			$repassword        = $_POST['password'];
 			$com_name        = $_POST['com_name'];
+			$activate_code        = random_string('alnum', 20);
 
-			$this->mod_company->create($user_name, $email, $password, $repassword, $com_name);
+			if($this->mod_company->create($user_name, $email, $password, $repassword, $com_name, $activate_code)) {
+				$this->session->set_flashdata('message', str_replace("_", " ", ucfirst($user_name)).', You have registered successfully. Please confirm your email address: '.'<a href="'.'http://'.strstr($email, '@').'" target="_blank">'.$email.'</a>');
+
+				$config = Array(
+						'protocol' => 'smtp',
+						'smtp_host' => 'ssl://smtp.googlemail.com',
+						'smtp_port' => 465,
+						'smtp_user' => 'sinachhum.cist@gmail.com', // change it to yours
+						'smtp_pass' => 'weG689FnyT', // change it to yours
+						'mailtype' => 'html',
+						'charset' => 'iso-8859-1',
+						'wordwrap' => TRUE
+				);
+
+				$this->load->library('email', $config);
+				$this->email->set_newline("\r\n");
+				$this->email->from('sinachhum.cist@gmail.com');
+				$this->email->to($email);
+				$this->email->subject('IlocationCambodia, Email verification!');
+				$this->email->message('Please click here to activate your account <a href="' .BASE_URL.'verify/verify_email/'.$activate_code.'">'.$activate_code.'</a>');
+				if($this->email->send()) {
+					redirect(BASE_URL);
+				}
+
+			}
+
 		}
-		redirect('/');
+		redirect(BASE_URL);
 	}
 }
