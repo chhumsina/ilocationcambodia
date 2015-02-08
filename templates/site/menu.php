@@ -17,7 +17,7 @@
 			<li><?php if ($this->session->userdata('useName')) {
 					echo '<a id="dashboard" href="'.BASE_URL.'member"><i class="icon-dashboard"></i> Dashboard</a>';
 				}else{
-					echo '<a href="#signin" data-toggle="modal" data-target=".bs-modal-sm"><i class="icon-signin"></i> Login</a>';
+					echo '<a href="#signin" data-toggle="modal" data-target=".bs-modal-sm"><i class="icon-signin"></i> Login / Register</a>';
 				}?>
 			</li>
 		</ul>

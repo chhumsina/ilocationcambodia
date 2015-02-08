@@ -5,7 +5,7 @@ class Member extends Site_Controller {
 	public function __construct(){
 		parent::__construct();
 
-		$this->load->model(array('mod_member'));
+		$this->load->model(array('mod_member','company/mod_company'));
 	}
 	/**
 	 * Check user login
@@ -59,5 +59,20 @@ class Member extends Site_Controller {
 
 	public function index(){
 		$this->dashboard();
+	}
+
+	// Register
+	public function register() {
+		if (isset($_POST['btn_submit'])) {
+			//$cat_name        = $_POST['cat_name'];
+			$user_name        = $_POST['username'];
+			$email        = $_POST['email'];
+			$password        = md5($_POST['password']);
+			$repassword        = $_POST['password'];
+			$com_name        = $_POST['com_name'];
+
+			$this->mod_company->create($user_name, $email, $password, $repassword, $com_name);
+		}
+		redirect('/');
 	}
 }

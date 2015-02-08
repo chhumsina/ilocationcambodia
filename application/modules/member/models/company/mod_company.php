@@ -53,13 +53,13 @@ class mod_company extends CI_Model {
 	}
 
 	// create
-	public function create($cat_name, $user_name, $password,$repassword, $com_name) {
+	public function create($user_name, $email, $password, $repassword, $com_name) {
 		$data = array(
-				field('cat_id') => $cat_name,
 				field('use_name') => $user_name,
 				field('use_password') => $password,
 				field('re_password') => $repassword,
-				field('com_name') => $com_name
+				field('com_name') => $com_name,
+				field('email') => $email
 		);
 		if ($this->db->insert(table('ilc_companies'), $data)) {
 			return TRUE;
